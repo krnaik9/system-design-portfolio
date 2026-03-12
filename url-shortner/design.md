@@ -1,6 +1,6 @@
-# system name: URL Shortner
-## date: 12/03/2026
-## version: 1
+# System Name: URL Shortner
+## Date: 12/03/2026
+## Version: 1
 
 
 ## Problem Statement
@@ -82,6 +82,24 @@ TABLE: URL_MAPPING
 | original_url | text      |
 | created_at   | timestamp |
 
+Example:
+
+CREATE DATABASE url_shortener;
+
+SHOW DATABASES;
+
+USE url_shortener;
+
+CREATE TABLE url_mapping (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    short_code VARCHAR(10) NOT NULL UNIQUE,
+    original_url TEXT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+INSERT INTO url_mapping (short_code, original_url) VALUES ('abc123', 'https://google.com');
+
+SELECT * FROM url_mapping;
 
 ## API Design
 POST /shorten
