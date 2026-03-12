@@ -56,19 +56,19 @@ Storage estimation
 ## High level Architecture
 User
 
-  |
+   |
 
 Load Balancer
 
-  |
+   |
 
 Application Servers
 
-  |
+   |
 
 Cache (Redis)
 
-  |
+   |
 
 Database
 
